@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ancient Trivia Arena</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="login">
+    <h2>Enter the Ancient Arena</h2>
+    <input type="text" id="username" placeholder="Your Warrior Name" />
+    <input type="text" id="room" placeholder="Arena Name" />
+    <button id="joinBtn">Join Battle</button>
+  </div>
+
+  <div id="game" style="display:none;">
+    <header>
+      <h2 id="roomTitle">Arena</h2>
+      <div id="timer">Time Left: <span id="countdown">--</span>s</div>
+    </header>
+
+    <section id="questionBox">
+      <div id="question">The Oracle is preparing your challenge...</div>
+      <div id="powerUps">
+        <button class="powerup" id="shield" title="Shield of Wisdom (Skip question)">🛡️</button>
+        <button class="powerup" id="sword" title="Sword of Truth (Reveal letter)">🗡️</button>
+        <button class="powerup" id="potion" title="Potion of Focus (Extra time)">🧪</button>
+      </div>
+    </section>
+
+    <section id="chatArea">
+      <div id="chat"></div>
+      <input type="text" id="message" placeholder="Answer or chat here..." autocomplete="off" />
+      <button id="sendBtn">Send</button>
+    </section>
+
+    <section id="scoresArea">
+      <h3>Scores</h3>
+      <ul id="scores"></ul>
+    </section>
+
+    <footer>
+      <div id="lore"></div>
+      <div id="footerQuote">"Only the worthy shall triumph."</div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.socket.io/4.5.1/socket.io.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
