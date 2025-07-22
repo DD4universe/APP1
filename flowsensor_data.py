@@ -9,9 +9,9 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(FLOW_SENSOR_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 # Firebase setup
-cred = credentials.Certificate("/home/pi/serviceAccountKey.json")  # Change to your path
+cred = credentials.Certificate("/Downloads/firebase-credentials.json")  
 firebase_admin.initialize_app(cred, {
-    'databaseURL': 'https://your-project.firebaseio.com/'  # Replace with your DB URL
+    'databaseURL':  "https://coolant-flow-monitor-default-rtdb.asia-southeast1.firebasedatabase.app" 
 })
 
 flow_rate = 0
